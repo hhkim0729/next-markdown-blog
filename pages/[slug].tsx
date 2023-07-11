@@ -1,16 +1,36 @@
 import { getPost, getPosts } from '@/lib/api';
 import { PostType } from '@/types';
 import Layout from './layout';
+import hljs from 'highlightjs';
+import { useEffect } from 'react';
 
 type Props = {
   post: PostType;
 };
 
 export default function Post({ post }: Props) {
+  useEffect(() => {
+    hljs.initHighlighting();
+  }, []);
+
   return (
     <Layout>
-      <h1>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+      <h1 className="text-6xl font-medium">{post.title}</h1>
+      <p className="my-4">{post.date}</p>
+      {post?.tags && (
+        <div>
+          {post.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-sm mr-2 text-gray-500"
+            >{`#${tag}`}</span>
+          ))}
+        </div>
+      )}
+      <div
+        dangerouslySetInnerHTML={{ __html: post.content }}
+        className="mt-8 prose"
+      ></div>
     </Layout>
   );
 }
@@ -30,8 +50,7 @@ type Params = {
 };
 
 export function getStaticProps({ params }: Params) {
-  const post = getPost(params.slug, ['title', 'data', 'content', 'tags']);
-  console.log(post);
+  const post = getPost(params.slug, ['title', 'date', 'content', 'tags']);
   return {
     props: { post },
   };

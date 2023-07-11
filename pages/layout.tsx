@@ -28,7 +28,7 @@ export default function Layout({ children }: Props) {
             <span>hh</span>
           </Link>
         </header>
-        <main className="mt-4">{children}</main>
+        <main className="mt-8">{children}</main>
       </div>
     </>
   );
