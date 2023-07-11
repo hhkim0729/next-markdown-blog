@@ -6,8 +6,9 @@ import matter from 'gray-matter';
 
 const postsDir = join(process.cwd(), '__posts');
 
-export function getPost(file: string, fields: string[] = []) {
-  const path = join(postsDir, file);
+export function getPost(slug: string, fields: string[] = []) {
+  const realSlug = slug.replace(/\.md$/, '');
+  const path = join(postsDir, `${realSlug}.md`);
   const { data, content } = matter.read(path);
   const parsedContent = remark().use(html).processSync(content).toString();
 
@@ -19,7 +20,7 @@ export function getPost(file: string, fields: string[] = []) {
 
   fields.forEach((field) => {
     if (field === 'slug') {
-      result[field] = file.replace(/\.md$/, '');
+      result[field] = realSlug;
     }
     if (field === 'content') {
       result[field] = parsedContent;
