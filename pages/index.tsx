@@ -10,9 +10,7 @@ type Props = {
 export default function Home({ posts }: Props) {
   return (
     <Layout>
-      <main>
-        <PostPreviewList posts={posts} />
-      </main>
+      <PostPreviewList posts={posts} />
     </Layout>
   );
 }

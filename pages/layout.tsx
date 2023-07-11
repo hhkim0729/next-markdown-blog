@@ -12,7 +12,7 @@ export default function Layout({ children }: Props) {
       <Head>
         <title>Next.js markdown blog</title>
       </Head>
-      <div className="p-8">
+      <div className="p-8 max-w-4xl m-auto">
         <header>
           <Link
             href="/"
@@ -28,7 +28,7 @@ export default function Layout({ children }: Props) {
             <span>hh</span>
           </Link>
         </header>
-        {children}
+        <main className="mt-4">{children}</main>
       </div>
     </>
   );

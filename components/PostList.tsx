@@ -7,7 +7,7 @@ type Props = {
 
 export default function PostList({ posts }: Props) {
   return (
-    <div className="mt-4">
+    <div>
       {posts.map((post, i) => (
         <Link
           key={i}
