@@ -1,6 +1,6 @@
 import { getPosts } from '@/lib/api';
 import Layout from '@/pages/layout';
-import PostPreviewList from '@/components/PostList';
+import PostList from '@/components/PostList';
 import { PostType } from '@/types';
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 export default function Home({ posts }: Props) {
   return (
     <Layout>
-      <PostPreviewList posts={posts} />
+      <PostList posts={posts} />
     </Layout>
   );
 }
