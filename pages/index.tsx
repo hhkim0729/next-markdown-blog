@@ -1,6 +1,6 @@
 import { getPosts } from '@/lib/api';
 import Layout from '@/pages/layout';
-import PostPreviewList from '@/components/PostPreviewList';
+import PostPreviewList from '@/components/PostList';
 import { PostType } from '@/types';
 
 type Props = {

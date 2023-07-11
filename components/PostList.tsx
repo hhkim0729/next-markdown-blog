@@ -5,7 +5,7 @@ type Props = {
   posts: PostType[];
 };
 
-export default function PostPreviewList({ posts }: Props) {
+export default function PostList({ posts }: Props) {
   return (
     <div className="mt-4">
       {posts.map((post, i) => (
