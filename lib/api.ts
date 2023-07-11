@@ -2,18 +2,38 @@ import { join } from 'path';
 import fs from 'fs';
 import { remark } from 'remark';
 import html from 'remark-html';
+import matter from 'gray-matter';
 
 const postsDir = join(process.cwd(), '__posts');
 
-export async function getPost(file: string) {
-  const fullPath = join(postsDir, file);
-  const content = fs.readFileSync(fullPath, 'utf8');
-  const result = await remark().use(html).process(content);
-  return result.toString();
+export function getPost(file: string, fields: string[] = []) {
+  const path = join(postsDir, file);
+  const { data, content } = matter.read(path);
+  const parsedContent = remark().use(html).processSync(content).toString();
+
+  type Result = {
+    [key: string]: string;
+  };
+
+  const result: Result = {};
+
+  fields.forEach((field) => {
+    if (field === 'content') {
+      result[field] = parsedContent;
+    }
+
+    if (typeof data[field] !== 'undefined') {
+      result[field] = data[field];
+    }
+  });
+
+  return result;
 }
 
-export async function getPosts() {
+export function getPosts(fields: string[] = []) {
   const files = fs.readdirSync(postsDir);
-  const posts = await Promise.all(files.map((file) => getPost(file)));
+  const posts = files
+    .map((file) => getPost(file, fields))
+    .sort((a, b) => (a.date > b.date ? -1 : 1));
   return posts;
 }
