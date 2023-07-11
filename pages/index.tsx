@@ -1,15 +1,26 @@
-import { Inter } from 'next/font/google';
-import Head from 'next/head';
+import { getPosts } from '@/lib/api';
+import Layout from '@/pages/layout';
+import PostPreviewList from '@/components/PostPreviewList';
+import { PostType } from '@/types';
 
-const inter = Inter({ subsets: ['latin'] });
+type Props = {
+  posts: PostType[];
+};
 
-export default function Home() {
+export default function Home({ posts }: Props) {
   return (
-    <>
-      <Head>
-        <title>Next.js markdown blog</title>
-      </Head>
-      <main></main>
-    </>
+    <Layout>
+      <main>
+        <h1>글 목록</h1>
+        <PostPreviewList posts={posts} />
+      </main>
+    </Layout>
   );
+}
+
+export function getStaticProps() {
+  const posts = getPosts(['slug', 'title', 'date', 'tags', 'description']);
+  return {
+    props: { posts },
+  };
 }
