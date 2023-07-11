@@ -366,6 +366,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/highlightjs@npm:^9":
+  version: 9.12.2
+  resolution: "@types/highlightjs@npm:9.12.2"
+  checksum: 578441408918a227e8f5c33859f28165614a7246c89decacdccf2974b13b1f08bfa8b161f9d2b9ad14fbf5c66bd05d0b9b9aced48354fc2c431619737596c0ee
+  languageName: node
+  linkType: hard
+
 "@types/json-schema@npm:*":
   version: 7.0.12
   resolution: "@types/json-schema@npm:7.0.12"
@@ -2304,6 +2311,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"highlightjs@npm:^9.16.2":
+  version: 9.16.2
+  resolution: "highlightjs@npm:9.16.2"
+  checksum: 511de5a5f2d3568963ebe4a337b2abe4fd5856de458b85af877eca0958c66245e107ca90a8f8ab06a3c3169f0f0f7c08d668e1c649ec0a8a1d871d99f7e7a476
+  languageName: node
+  linkType: hard
+
 "html-void-elements@npm:^2.0.0":
   version: 2.0.1
   resolution: "html-void-elements@npm:2.0.1"
@@ -3480,6 +3494,7 @@ __metadata:
   dependencies:
     "@tailwindcss/typography": ^0.5.9
     "@types/eslint": ^8
+    "@types/highlightjs": ^9
     "@types/node": 20.4.1
     "@types/react": 18.2.14
     "@types/react-dom": 18.2.6
@@ -3487,6 +3502,7 @@ __metadata:
     eslint: 8.44.0
     eslint-config-next: 13.4.9
     gray-matter: ^4.0.3
+    highlightjs: ^9.16.2
     next: 13.4.9
     postcss: 8.4.25
     react: 18.2.0
