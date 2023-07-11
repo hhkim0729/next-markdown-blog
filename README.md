@@ -305,6 +305,12 @@ export default function Post({ post }: Props) {
 }
 ```
 
+- `_app.tsx`에 css 추가
+
+```jsx
+import 'highlightjs/styles/atom-one-dark.css';
+```
+
 ## 배포
 
 [New Project – Vercel](https://vercel.com/new)

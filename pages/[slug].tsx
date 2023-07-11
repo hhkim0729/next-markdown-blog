@@ -3,7 +3,6 @@ import { getPost, getPosts } from '@/lib/api';
 import hljs from 'highlightjs';
 import Layout from './layout';
 import { PostType } from '@/types';
-import 'highlightjs/styles/atom-one-dark.css';
 
 type Props = {
   post: PostType;
