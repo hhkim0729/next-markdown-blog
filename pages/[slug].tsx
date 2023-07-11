@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { getPost, getPosts } from '@/lib/api';
-import hljs from 'highlightjs';
+import hljs from 'highlight.js';
 import Layout from './layout';
 import { PostType } from '@/types';
 
