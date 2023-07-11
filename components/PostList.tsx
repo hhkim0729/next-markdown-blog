@@ -14,11 +14,11 @@ export default function PostList({ posts }: Props) {
           href={`/${post.slug}`}
           className="block border-b border-gray-300 p-2 hover:bg-gray-100"
         >
-          <h2 className="text-2xl font-medium">{post.title}</h2>
-          <p>{post.date}</p>
-          <p className="text-sm">{post.description}</p>
+          <h2 className="text-3xl font-medium">{post.title}</h2>
+          <p className="my-2">{post.date}</p>
+          <p>{post.description}</p>
           {post?.tags && (
-            <div>
+            <div className="mt-2">
               {post.tags.map((tag) => (
                 <span
                   key={tag}
