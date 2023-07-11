@@ -285,12 +285,11 @@ https://github.com/highlightjs/highlight.js/
 https://highlightjs.org/static/demo/
 
 ```bash
-yarn add highlightjs
+yarn add highlight.js
 ```
 
 ```jsx
-import hljs from 'highlightjs';
-import 'highlightjs/styles/atom-one-dark.css';
+import hljs from 'highlight.js';
 import { useEffect } from 'react';
 
 ...
@@ -308,7 +307,7 @@ export default function Post({ post }: Props) {
 - `_app.tsx`에 css 추가
 
 ```jsx
-import 'highlightjs/styles/atom-one-dark.css';
+import 'highlight.js/styles/atom-one-dark.css';
 ```
 
 ## 배포
@@ -320,7 +319,9 @@ import 'highlightjs/styles/atom-one-dark.css';
 
 ## 더 해볼 것
 
-- [ ] 코드 하이라이팅이 새로고침 이후에 적용되는데, 이게 `useEffect()`를 사용해서 빌드 타임에 적용되는 게 아니라 하이드레이션 타임에 적용되는 듯...?
+- [x] 코드 하이라이팅이 새로고침 이후에 적용되는데, 이게 `useEffect()`를 사용해서 빌드 타임에 적용되는 게 아니라 하이드레이션 타임에 적용되는 듯...?
       아직 Next.js를 잘 몰라서 좀더 찾아봐야 할 것 같다.
+
+  👉 엉뚱한 라이브러리 잘못 깔아서 제대로 동작 안 하고 있었던 듯...
 
 - [ ] 메타데이터에서 받아온 카테고리나 태그를 통해서 모아보기하는 기능 추가
