@@ -317,3 +317,10 @@ import 'highlightjs/styles/atom-one-dark.css';
 
 1. Import Git Repository에서 레포 선택
 2. Deploy
+
+## 더 해볼 것
+
+- [ ] 코드 하이라이팅이 새로고침 이후에 적용되는데, 이게 `useEffect()`를 사용해서 빌드 타임에 적용되는 게 아니라 하이드레이션 타임에 적용되는 듯...?
+      아직 Next.js를 잘 몰라서 좀더 찾아봐야 할 것 같다.
+
+- [ ] 메타데이터에서 받아온 카테고리나 태그를 통해서 모아보기하는 기능 추가
