@@ -1,7 +1,8 @@
 import { join } from 'path';
 import fs from 'fs';
 import { remark } from 'remark';
-import html from 'remark-html';
+import remarkHtml from 'remark-html';
+import remarkGfm from 'remark-gfm';
 import matter from 'gray-matter';
 
 const postsDir = join(process.cwd(), '__posts');
@@ -10,7 +11,11 @@ export function getPost(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.md$/, '');
   const path = join(postsDir, `${realSlug}.md`);
   const { data, content } = matter.read(path);
-  const parsedContent = remark().use(html).processSync(content).toString();
+  const parsedContent = remark()
+    .use(remarkGfm)
+    .use(remarkHtml)
+    .processSync(content)
+    .toString();
 
   type Result = {
     [key: string]: string;
