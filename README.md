@@ -290,6 +290,7 @@ yarn add highlightjs
 
 ```jsx
 import hljs from 'highlightjs';
+import 'highlightjs/styles/atom-one-dark.css';
 import { useEffect } from 'react';
 
 ...
@@ -302,12 +303,6 @@ export default function Post({ post }: Props) {
     ...
   );
 }
-```
-
-- `_app.tsx`에 css 추가
-
-```jsx
-import 'highlightjs/styles/atom-one-dark.css';
 ```
 
 ## 배포
