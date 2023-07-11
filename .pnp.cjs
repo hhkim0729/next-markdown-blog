@@ -30,7 +30,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@tailwindcss/typography", "virtual:0a0517514f60e30a87c62bfea9df994d6084c3f6d78282544ab8b57ac98a7c3139a4a3cb4a136b88629a860f98c620c25e8b9109f73820a425b665c2b758717f#npm:0.5.9"],\
             ["@types/eslint", "npm:8.44.0"],\
-            ["@types/highlightjs", "npm:9.12.2"],\
             ["@types/node", "npm:20.4.1"],\
             ["@types/react", "npm:18.2.14"],\
             ["@types/react-dom", "npm:18.2.6"],\
@@ -38,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.44.0"],\
             ["eslint-config-next", "virtual:0a0517514f60e30a87c62bfea9df994d6084c3f6d78282544ab8b57ac98a7c3139a4a3cb4a136b88629a860f98c620c25e8b9109f73820a425b665c2b758717f#npm:13.4.9"],\
             ["gray-matter", "npm:4.0.3"],\
-            ["highlightjs", "npm:9.16.2"],\
+            ["highlight.js", "npm:11.8.0"],\
             ["next", "virtual:0a0517514f60e30a87c62bfea9df994d6084c3f6d78282544ab8b57ac98a7c3139a4a3cb4a136b88629a860f98c620c25e8b9109f73820a425b665c2b758717f#npm:13.4.9"],\
             ["postcss", "npm:8.4.25"],\
             ["react", "npm:18.2.0"],\
@@ -505,15 +504,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/hast", "npm:2.3.4"],\
             ["@types/unist", "npm:3.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@types/highlightjs", [\
-        ["npm:9.12.2", {\
-          "packageLocation": "./.yarn/cache/@types-highlightjs-npm-9.12.2-c99fccf6fb-5784414089.zip/node_modules/@types/highlightjs/",\
-          "packageDependencies": [\
-            ["@types/highlightjs", "npm:9.12.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2881,11 +2871,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["highlightjs", [\
-        ["npm:9.16.2", {\
-          "packageLocation": "./.yarn/cache/highlightjs-npm-9.16.2-7a6aaa69c5-511de5a5f2.zip/node_modules/highlightjs/",\
+      ["highlight.js", [\
+        ["npm:11.8.0", {\
+          "packageLocation": "./.yarn/cache/highlight.js-npm-11.8.0-6ff1e42749-d2578a57ae.zip/node_modules/highlight.js/",\
           "packageDependencies": [\
-            ["highlightjs", "npm:9.16.2"]\
+            ["highlight.js", "npm:11.8.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4456,7 +4446,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next-markdown-blog", "workspace:."],\
             ["@tailwindcss/typography", "virtual:0a0517514f60e30a87c62bfea9df994d6084c3f6d78282544ab8b57ac98a7c3139a4a3cb4a136b88629a860f98c620c25e8b9109f73820a425b665c2b758717f#npm:0.5.9"],\
             ["@types/eslint", "npm:8.44.0"],\
-            ["@types/highlightjs", "npm:9.12.2"],\
             ["@types/node", "npm:20.4.1"],\
             ["@types/react", "npm:18.2.14"],\
             ["@types/react-dom", "npm:18.2.6"],\
@@ -4464,7 +4453,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.44.0"],\
             ["eslint-config-next", "virtual:0a0517514f60e30a87c62bfea9df994d6084c3f6d78282544ab8b57ac98a7c3139a4a3cb4a136b88629a860f98c620c25e8b9109f73820a425b665c2b758717f#npm:13.4.9"],\
             ["gray-matter", "npm:4.0.3"],\
-            ["highlightjs", "npm:9.16.2"],\
+            ["highlight.js", "npm:11.8.0"],\
             ["next", "virtual:0a0517514f60e30a87c62bfea9df994d6084c3f6d78282544ab8b57ac98a7c3139a4a3cb4a136b88629a860f98c620c25e8b9109f73820a425b665c2b758717f#npm:13.4.9"],\
             ["postcss", "npm:8.4.25"],\
             ["react", "npm:18.2.0"],\
