@@ -11,7 +11,6 @@ export default function Home({ posts }: Props) {
   return (
     <Layout>
       <main>
-        <h1>글 목록</h1>
         <PostPreviewList posts={posts} />
       </main>
     </Layout>

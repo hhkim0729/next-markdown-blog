@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 type Props = {
@@ -11,10 +12,24 @@ export default function Layout({ children }: Props) {
       <Head>
         <title>Next.js markdown blog</title>
       </Head>
-      <header>
-        <Link href="/">hhkim</Link>
-      </header>
-      {children}
+      <div className="p-8">
+        <header>
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-4xl font-bold hover:underline"
+          >
+            <Image
+              src="/favicon.ico"
+              alt="logo"
+              width="20"
+              height="20"
+              className="w-8 h-8"
+            />
+            <span>hh</span>
+          </Link>
+        </header>
+        {children}
+      </div>
     </>
   );
 }
