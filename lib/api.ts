@@ -18,10 +18,12 @@ export function getPost(file: string, fields: string[] = []) {
   const result: Result = {};
 
   fields.forEach((field) => {
+    if (field === 'slug') {
+      result[field] = file.replace(/\.md$/, '');
+    }
     if (field === 'content') {
       result[field] = parsedContent;
     }
-
     if (typeof data[field] !== 'undefined') {
       result[field] = data[field];
     }
