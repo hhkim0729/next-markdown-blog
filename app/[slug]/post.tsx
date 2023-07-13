@@ -10,7 +10,7 @@ type Props = {
 
 export default function Post({ post }: Props) {
   useEffect(() => {
-    hljs.initHighlighting();
+    hljs.highlightAll();
   }, []);
 
   return (
