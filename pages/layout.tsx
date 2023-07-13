@@ -16,7 +16,7 @@ export default function Layout({ children }: Props) {
         <header>
           <Link
             href="/"
-            className="flex items-center gap-2 text-4xl font-bold hover:underline"
+            className="w-fit flex items-center gap-2 text-4xl font-bold hover:underline"
           >
             <Image
               src="/favicon.ico"
