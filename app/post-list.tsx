@@ -1,5 +1,5 @@
-import { PostType } from '@/types';
 import Link from 'next/link';
+import { PostType } from '@/app/types';
 
 type Props = {
   posts: PostType[];

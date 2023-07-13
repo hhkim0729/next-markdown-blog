@@ -1,8 +1,8 @@
+'use client';
+
 import { useEffect } from 'react';
-import { getPost, getPosts } from '@/lib/api';
 import hljs from 'highlight.js';
-import Layout from './layout';
-import { PostType } from '@/types';
+import { PostType } from '@/app/types';
 
 type Props = {
   post: PostType;
@@ -14,7 +14,7 @@ export default function Post({ post }: Props) {
   }, []);
 
   return (
-    <Layout>
+    <div>
       <h1 className="text-6xl font-medium">{post.title}</h1>
       <p className="my-4">{post.date}</p>
       {post?.tags && (
@@ -28,30 +28,9 @@ export default function Post({ post }: Props) {
         </div>
       )}
       <div
-        dangerouslySetInnerHTML={{ __html: post.content }}
+        dangerouslySetInnerHTML={{ __html: post.content || '' }}
         className="mt-8 prose"
       ></div>
-    </Layout>
+    </div>
   );
-}
-
-export function getStaticPaths() {
-  const posts = getPosts(['slug']);
-  const paths = posts.map((post) => ({
-    params: { slug: post.slug },
-  }));
-  return { paths, fallback: false };
-}
-
-type Params = {
-  params: {
-    slug: string;
-  };
-};
-
-export function getStaticProps({ params }: Params) {
-  const post = getPost(params.slug, ['title', 'date', 'content', 'tags']);
-  return {
-    props: { post },
-  };
 }
