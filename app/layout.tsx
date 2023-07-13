@@ -31,7 +31,7 @@ export default function RootLayout({ children }: Props) {
               <span>hh</span>
             </Link>
           </header>
-          <main className="mt-8 border-y-2 border-rose-500">{children}</main>
+          <main className="mt-8">{children}</main>
         </div>
       </body>
     </html>

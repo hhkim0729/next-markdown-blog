@@ -14,7 +14,7 @@ export default function Post({ post }: Props) {
   }, []);
 
   return (
-    <div>
+    <div className="py-6 border-y-2 border-gray-300">
       <h1 className="text-6xl font-medium">{post.title}</h1>
       <p className="my-4">{post.date}</p>
       {post?.tags && (
